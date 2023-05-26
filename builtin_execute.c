@@ -7,8 +7,8 @@
  * @exit_status: Exit status
  * Return: return 1
  */
-int builtin_execute(char **arguments, char **argv, 
-		int *exit_status, int count_command)
+int builtin_execute(char **arguments, char **argv, int *exit_status,
+	       	int count_command)
 {
 	pid_t pid_used;
 	int status;
