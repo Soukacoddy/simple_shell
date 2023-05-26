@@ -37,7 +37,8 @@ char **tokenizer_path(char *input);
 char *validate_input(char **arguments, char **argv, int count_command);
 int validate_spaces(char *input);
 
-int builtin_execute(char **arguments, char **argv, int *exit_status, int count_command);
+int builtin_execute(char **arguments, char **argv,
+	int *exit_status, int count_command);
 int shell_execute_builtins(char **args, char *input_stdin,
 			 char **argv, int *exit_status, int count_command);
 

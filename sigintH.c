@@ -12,16 +12,18 @@ void sigintH(int signum)
 		write(2, "\n$ ", 3);
 	}
 }
+
 /**
-* print_inger: length of string
-* @s: string arg
-*/
+ * print_intiger - Prints an integer to the standard output
+ * @i: The integer to be printed
+ */
 
 void print_intiger(int i)
 {
 	char c;
 
-	if(i != 0) {
+	if (i != 0)
+	{
 		print_intiger(i / 10);
 		c = (i % 10) + '0';
 		write(1, &c, 1);
@@ -29,7 +31,7 @@ void print_intiger(int i)
 }
 
 /**
-* print_st: length of string
+* print_st - length of string
 * @s: string arg
 */
 
@@ -37,6 +39,7 @@ void print_st(char *s)
 {
 	char c;
 	int i = 0;
+
 	while (s[i])
 	{
 		c = s[i];
@@ -46,9 +49,9 @@ void print_st(char *s)
 }
 
 /**
-* _strlen: length of string
+* _strlen - length of string
 * @s: string arg
-* return: return length
+* Return: length
 */
 
 int _strlen(char *s)
@@ -61,3 +64,4 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+
