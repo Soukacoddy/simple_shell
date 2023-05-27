@@ -1,12 +1,11 @@
 #include "main.h"
 
-
 /**
- * hsh_tokenizer - split input into tokens
- * @input: command string
+ * tokenizer_path - tokize path into tokens
+ * @input: path tokenize
  * Return: return array of tokens
  */
-char **hsh_tokenizer(char *input)
+char **tokenizer_path(char *input)
 {
 	int buffer = BUFSIZE, newBuffer = 0, position = 0;
 	char **tokens = NULL, *token = NULL;
@@ -18,7 +17,7 @@ char **hsh_tokenizer(char *input)
 		fprintf(stderr, "memory allocation error\n");
 		exit(EXIT_FAILURE);
 	}
-	token = strtok(input, DELIM_I);
+	token = strtok(input, DELIM_P);
 	while (token != NULL)
 	{
 		tokens[position] = token;
@@ -37,7 +36,7 @@ char **hsh_tokenizer(char *input)
 				exit(EXIT_FAILURE);
 			}
 		}
-		token = strtok(NULL, DELIM_I);
+		token = strtok(NULL, DELIM_P);
 	}
 	tokens[position] = NULL;
 	return (tokens);
