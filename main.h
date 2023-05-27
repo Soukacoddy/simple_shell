@@ -30,6 +30,7 @@ extern char **environ;
 void print_st(char *s);
 int _strlen(char *s);
 void print_intiger(int i);
+char *print_st_error(char *argv, char *argment, int count);
 
 char **hsh_tokenizer(char *input);
 char **tokenizer_path(char *input);

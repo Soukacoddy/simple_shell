@@ -6,6 +6,7 @@
  * @input_stdin: String from input
  * @argv: Array of arguments
  * @exit_status: Exit status
+ * @count_command: number of command typed
  * Return: return 1 if sucess or 0 if not
  */
 int shell_execute_builtins(char **args, char *input_stdin,
